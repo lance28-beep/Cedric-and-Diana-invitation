@@ -1,0 +1,361 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  /* Primary: light blue #AFC8E6 */
+  --primary: #AFC8E6;
+  --primary-foreground: oklch(0.145 0 0);
+  /* Secondary: dusty pink #D8B0B0 */
+  --secondary: #D8B0B0;
+  --secondary-foreground: oklch(0.145 0 0);
+  /* Sage mapped to secondary */
+  --sage: #D8B0B0;
+  /* Muted/light surfaces: cream #F1EDE2 */
+  --muted: #F1EDE2;
+  --muted-foreground: oklch(0.145 0 0);
+  /* Accent: dusty pink #D8B0B0 */
+  --accent: #D8B0B0;
+  --accent-foreground: oklch(0.145 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: #AFC8E6;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #AFC8E6;
+  --sidebar-primary-foreground: oklch(0.145 0 0);
+  --sidebar-accent: #D8B0B0;
+  --sidebar-accent-foreground: oklch(0.145 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: #AFC8E6;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: #AFC8E6;
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: #D8B0B0;
+  --secondary-foreground: oklch(0.985 0 0);
+  /* Sage for dark mode */
+  --sage: #D8B0B0;
+  --muted: #F1EDE2;
+  --muted-foreground: oklch(0.145 0 0);
+  --accent: #D8B0B0;
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: #AFC8E6;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: #AFC8E6;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: #D8B0B0;
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: #AFC8E6;
+}
+
+@theme inline {
+  --font-sans: "Inter", "Inter Fallback";
+  /* Updated serif font to Great Vibes */
+  --font-serif: "Great Vibes", "Great Vibes Fallback";
+  --font-imperial-script: "Imperial Script", cursive;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  /* Added sage color to theme */
+  --color-sage: var(--sage);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* New Color Motif */
+  --color-toffee-brown-50: #f8f1ed;
+  --color-toffee-brown-100: #f0e4db;
+  --color-toffee-brown-200: #e2c8b6;
+  --color-toffee-brown-300: #d3ad92;
+  --color-toffee-brown-400: #c5926d;
+  --color-toffee-brown-500: #b67649;
+  --color-toffee-brown-600: #925f3a;
+  --color-toffee-brown-700: #6d472c;
+  --color-toffee-brown-800: #492f1d;
+  --color-toffee-brown-900: #24180f;
+  --color-toffee-brown-950: #1a110a;
+
+  --color-saddle-brown-50: #faf0ea;
+  --color-saddle-brown-100: #f6e1d5;
+  --color-saddle-brown-200: #ecc3ac;
+  --color-saddle-brown-300: #e3a682;
+  --color-saddle-brown-400: #d98859;
+  --color-saddle-brown-500: #d06a2f;
+  --color-saddle-brown-600: #a65526;
+  --color-saddle-brown-700: #7d401c;
+  --color-saddle-brown-800: #532a13;
+  --color-saddle-brown-900: #2a1509;
+  --color-saddle-brown-950: #1d0f07;
+
+  --color-rich-mahogany-50: #fbedea;
+  --color-rich-mahogany-100: #f7dcd4;
+  --color-rich-mahogany-200: #eeb9aa;
+  --color-rich-mahogany-300: #e6957f;
+  --color-rich-mahogany-400: #dd7255;
+  --color-rich-mahogany-500: #d54f2a;
+  --color-rich-mahogany-600: #aa3f22;
+  --color-rich-mahogany-700: #802f19;
+  --color-rich-mahogany-800: #552011;
+  --color-rich-mahogany-900: #2b1008;
+  --color-rich-mahogany-950: #1e0b06;
+
+  --color-peach-glow-50: #fcf2e9;
+  --color-peach-glow-100: #f8e4d3;
+  --color-peach-glow-200: #f2c9a6;
+  --color-peach-glow-300: #ebaf7a;
+  --color-peach-glow-400: #e4944e;
+  --color-peach-glow-500: #de7921;
+  --color-peach-glow-600: #b1611b;
+  --color-peach-glow-700: #854914;
+  --color-peach-glow-800: #59300d;
+  --color-peach-glow-900: #2c1807;
+  --color-peach-glow-950: #1f1105;
+
+  --color-cinnamon-wood-50: #f9f1ec;
+  --color-cinnamon-wood-100: #f2e3d9;
+  --color-cinnamon-wood-200: #e6c7b3;
+  --color-cinnamon-wood-300: #d9ab8c;
+  --color-cinnamon-wood-400: #cc8f66;
+  --color-cinnamon-wood-500: #bf7340;
+  --color-cinnamon-wood-600: #995c33;
+  --color-cinnamon-wood-700: #734526;
+  --color-cinnamon-wood-800: #4d2e19;
+  --color-cinnamon-wood-900: #26170d;
+  --color-cinnamon-wood-950: #1b1009;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply text-foreground;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Imperial Script font utility class */
+.imperial-script-regular {
+  font-family: var(--font-imperial-script), cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Lavishly Yours font utility class */
+.lavishly-yours-regular {
+  font-family: "Lavishly Yours", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Updated scrollbar color to primary */
+::-webkit-scrollbar-thumb {
+  background: #AFC8E6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D8B0B0;
+}
+
+/* Shimmer animation for countdown cards */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* Floating animations for decorative elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  33% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  66% {
+    transform: translateY(10px) translateX(-10px);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  33% {
+    transform: translateY(15px) translateX(-15px);
+  }
+  66% {
+    transform: translateY(-10px) translateX(15px);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 10s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* Enhanced shadow for cards */
+.shadow-3xl {
+  box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+}
+
+/* Style Script font for hero names */
+.style-script-regular {
+  font-family: "Style Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Cinzel font utility class */
+.cinzel {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Countdown gradient text */
+.countdown-gradient-text * {
+  background: linear-gradient(180deg, #F7DC63 0%, #DEB73E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Wedding colors for Love Story section */
+.bg-wedding-brown {
+  background-color: #4A2E2E;
+}
+
+.bg-wedding-paper {
+  background-color: #F7E6CA;
+}
+
+.text-wedding-brown {
+  color: #4A2E2E;
+}
+
+.text-wedding-paper {
+  color: #F7E6CA;
+}
+
+/* Font utilities for Love Story section */
+.font-heading {
+  font-family: "Style Script", cursive;
+  font-weight: 400;
+}
+
+.font-body {
+  font-family: "Crimson Text", serif;
+}
+
+/* Gentle rotation animation for couple photos */
+@keyframes gentleRotate {
+  0%, 100% {
+    transform: rotate(var(--base-rot, 0deg)) scale(1.1);
+  }
+  50% {
+    transform: rotate(calc(var(--base-rot, 0deg) + 3deg)) scale(1.1);
+  }
+}
