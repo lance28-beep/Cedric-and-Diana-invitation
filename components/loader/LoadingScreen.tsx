@@ -89,9 +89,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
   }, [onComplete]);
 
   const coupleNames = `${siteConfig.couple.brideNickname} & ${siteConfig.couple.groomNickname}`;
-  const hashtag =
-    siteConfig.snapShare?.hashtag ??
-    `#${siteConfig.couple.brideNickname}And${siteConfig.couple.groomNickname}`;
+  const hashtag = '#DianaCedYes!'
   const productionCredit = siteConfig.snapShare?.productionCredit ?? '';
 
   // Palette: dark brown, medium brown, tan, light peachy cream, cream
