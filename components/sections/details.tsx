@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import { Section } from "@/components/section"
 import { Shirt, Copy, Check, Navigation, MapPin } from "lucide-react"
 import { useState, useEffect } from "react"
@@ -25,12 +26,26 @@ const cinzel = Cinzel({
 
 export function Details() {
   const [copiedItems, setCopiedItems] = useState<Set<string>>(new Set())
+  const [currentCeremonyImageIndex, setCurrentCeremonyImageIndex] = useState(0)
   const [currentReceptionImageIndex, setCurrentReceptionImageIndex] = useState(0)
+
+  const ceremonyImages = [
+    "/church/img1.png",
+    "/church/img2.png",
+    "/church/img3.png",
+  ]
 
   const receptionImages = [
     "/Details/Location.jpg",
     "/Details/ATTiKA8855-2022-10-1383-1200.jpg",
   ]
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentCeremonyImageIndex((prev) => (prev + 1) % ceremonyImages.length)
+    }, 3000)
+    return () => clearInterval(timer)
+  }, [])
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -179,17 +194,26 @@ export function Details() {
           
           {/* Main card */}
           <div className="relative elegant-card bg-[#FFF7F6] rounded-xl sm:rounded-2xl overflow-hidden border-4 border-[#85441E]/30 premium-shadow hover:border-[#85441E]/50 transition-all duration-300">
-            {/* Venue Image */}
+            {/* Venue Images (slideshow) */}
             <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[30rem] overflow-hidden">
-              <Image
-                src="/Details/StJostKapelle6373 Ennetbürgen.jpg"
-                alt={siteConfig.ceremony.venue}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1280px"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              {ceremonyImages.map((src, index) => (
+                <div
+                  key={src}
+                  className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                    index === currentCeremonyImageIndex ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <Image
+                    src={src}
+                    alt={siteConfig.ceremony.venue}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1280px"
+                    priority={index === 0}
+                  />
+                </div>
+              ))}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
               
               {/* Venue name overlay */}
               <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-6 md:left-6 right-3 sm:right-4 md:right-6">
@@ -434,17 +458,17 @@ export function Details() {
             <div className="h-px w-10 sm:w-14 md:w-20 bg-[#85441E]/50" />
           </div>
           <h3 className={`text-xl sm:text-2xl md:text-3xl ${cinzel.className} text-[#85441E] mb-3 sm:mb-4`}>
-            Attire Guidelines
+            Dresscode
           </h3>
           <p className={`text-sm sm:text-base md:text-lg ${cormorant.className} text-[#85441E] font-light`}>
-            Our celebration is semi-formal / formal. Please follow the guidelines below.
+            Dress Code: Formal Rustic Glam
           </p>
         </div>
 
         {/* Attire Cards */}
         <div className="space-y-5 sm:space-y-6 md:space-y-8">
-          {/* Principal Sponsor Attire */}
-          <div className="relative group">
+          {/* Principal Sponsor Attire (hidden) */}
+          <div className="relative group hidden">
             <div className="absolute -inset-1 bg-gradient-to-br from-[#85441E]/15 to-[#85441E]/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
             
             <div className="relative bg-[#FFF7F6] backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-7 lg:p-9 border-4 border-[#85441E]/30 shadow-lg hover:shadow-xl transition-all duration-300">
@@ -452,9 +476,9 @@ export function Details() {
                 Principal Sponsor Attire
               </h4>
 
-              {/* Copy: follow color palette */}
+              {/* Guest dress code copy */}
               <p className={`text-center text-xs sm:text-sm md:text-base lg:text-lg ${cormorant.className} text-[#85441E]/90 font-light leading-relaxed mb-4 sm:mb-5 md:mb-6 max-w-xl mx-auto px-3`}>
-                Please follow the color palette below for your outfit.
+                Dress Code: Formal Rustic Glam. We invite you to join us in elegant attire that complements our wedding motif, drawing inspiration from deep barn-wood browns, warm caramels, burnished copper, earthy olive, and soft champagne gold. While these looks are for inspiration, please feel free to express your own style—favor these candlelit tones over bright neons, and kindly reserve plain white or ivory for the bride.
               </p>
 
               {/* Principal sponsor attire image */}
@@ -501,42 +525,23 @@ export function Details() {
                 Guest Attire
               </h4>
 
-              {/* Copy: follow color palette */}
+              {/* Dress Code copy */}
               <p className={`text-center text-xs sm:text-sm md:text-base lg:text-lg ${cormorant.className} text-[#85441E]/90 font-light leading-relaxed mb-4 sm:mb-5 md:mb-6 max-w-xl mx-auto px-3`}>
-                Please follow the color palette below for your outfit.
+                We invite you to join us in elegant attire that will complement our wedding motif. To help create a harmonious celebration, we encourage you to draw inspiration from our palette of deep barn-wood browns, warm caramels, burnished copper, earthy olive, and soft champagne gold.
+              </p>
+              <p className={`text-center text-xs sm:text-sm md:text-base lg:text-lg ${cormorant.className} text-[#85441E]/90 font-light leading-relaxed mb-4 sm:mb-5 md:mb-6 max-w-xl mx-auto px-3`}>
+                While these looks are for inspiration, we want you to showcase your own personal style! We kindly ask that you favor these candlelit tones over bright neons, and please reserve plain white or ivory for the bride.
               </p>
 
-              {/* Guest attire image */}
-              <div className="relative w-full aspect-[4/3] sm:aspect-[3/2] max-w-2xl mx-auto rounded-lg sm:rounded-xl overflow-hidden border border-[#85441E]/30 mb-4 sm:mb-6 md:mb-8">
+              {/* Dress code image - full width and height within card */}
+              <div className="relative w-full h-72 sm:h-96 md:h-[28rem] lg:h-[30rem] rounded-lg sm:rounded-xl overflow-hidden border border-[#85441E]/30">
                 <Image
-                  src="/Details/guest.png"
-                  alt="Guest attire inspiration — follow the color palette"
+                  src="/Details/newAttireguidelines.png"
+                  alt="Formal Rustic Glam attire guidelines"
                   fill
-                  className="object-contain bg-[#FFF7F6]/50 p-2 sm:p-3"
+                  className="object-contain bg-[#FFF7F6]/50"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 672px"
                 />
-              </div>
-
-              {/* Color palette circles - using motif colors */}
-              <div className="flex justify-center gap-2 sm:gap-3 md:gap-4 flex-wrap mb-5 sm:mb-6 md:mb-7 px-2">
-                {["#935F3B", "#85441E", "#38150B", "#EFBE94", "#B26A3B"].map((color) => (
-                  <div
-                    key={color}
-                    className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full shadow-md border-2 border-white ring-2 ring-[#85441E]/30 hover:scale-110 transition-transform duration-300"
-                    style={{ backgroundColor: color }}
-                    title={color}
-                  />
-                ))}
-              </div>
-              
-              {/* Guest Dress Code Text */}
-              <div className="text-center pt-3 sm:pt-4 border-t border-[#85441E]/20 px-3 sm:px-4">
-                <p className={`text-sm sm:text-base md:text-lg lg:text-xl ${cormorant.className} text-[#85441E] leading-relaxed mb-3 sm:mb-4`}>
-                  <span className="font-semibold">Semi-Formal / Formal</span>
-                </p>
-                <p className={`text-xs sm:text-sm ${cormorant.className} text-[#85441E]/90 font-light`}>
-                  Elegant attire that complements our wedding motif. Kindly avoid plain white or bridal ivory.
-                </p>
               </div>
             </div>
           </div>
@@ -574,10 +579,70 @@ export function Details() {
                 </p>
               </div>
 
-              {/* No Photos */}
+              {/* Quick Tips & Transport */}
+              <div className="bg-gradient-to-br from-[#EFBE94]/25 via-[#FFF7F6]/60 to-[#FFF7F6] rounded-xl p-5 sm:p-6 md:p-7 border border-[#85441E]/20">
+                <p className={`text-sm sm:text-base md:text-lg ${cormorant.className} text-[#85441E] leading-relaxed mb-3`}>
+                  <span className="font-semibold">Travel & Quick Tips:</span> Private vehicles and local transport are welcome. Coordinate with friends or family and plan your route ahead of time.
+                </p>
+                <div className="grid gap-4 sm:gap-6 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-start">
+                  {/* Bullet tips */}
+                  <ul className={`list-disc list-inside space-y-1.5 sm:space-y-2 text-sm sm:text-base md:text-lg ${cormorant.className} text-[#85441E] leading-relaxed`}>
+                    <li>Plan your route ahead to avoid unexpected delays.</li>
+                    <li>Please avoid walking during the ceremony. Approach the coordinator or wait to be guided.</li>
+                    <li>Coordinate carpooling with friends or family when possible.</li>
+                    <li>Eat before coming so you have energy celebrating with us.</li>
+                  </ul>
+
+                  {/* Professional schedule snapshot */}
+                  <div className="text-xs sm:text-sm md:text-base text-[#85441E]">
+                    <p className={`${cormorant.className} font-semibold mb-2 text-center md:text-left`}>
+                      Schedule Snapshot
+                    </p>
+                    <div className="overflow-hidden rounded-lg border border-[#85441E]/30 bg-white/80 shadow-sm">
+                      <div className="grid grid-cols-[0.8fr_1.4fr] text-[11px] sm:text-xs md:text-sm">
+                        <div className="bg-[#85441E] text-[#EFBE94] font-semibold px-2.5 sm:px-3 py-2 border-b border-white/10">
+                          Time
+                        </div>
+                        <div className="bg-[#85441E] text-[#EFBE94] font-semibold px-2.5 sm:px-3 py-2 border-b border-white/10">
+                          Moment
+                        </div>
+
+                        {[
+                          ["2:00 PM", "Arrival of guests"],
+                          ["2:30 PM", "Wedding ceremony"],
+                          ["3:30 PM", "Apéro & photos"],
+                          ["5:30 PM", "Program starts"],
+                          ["7:00 PM", "Dinner & games"],
+                          ["9:00 PM", "Party begins"],
+                          ["11:00 PM", "Send off"],
+                        ].map(([time, label], index) => (
+                          <React.Fragment key={time}>
+                            <div
+                              className={`px-2.5 sm:px-3 py-1.5 border-b border-[#85441E]/10 ${
+                                index % 2 === 0 ? "bg-white" : "bg-[#FFF7F6]"
+                              }`}
+                            >
+                              <span className="font-semibold">{time}</span>
+                            </div>
+                            <div
+                              className={`px-2.5 sm:px-3 py-1.5 border-b border-[#85441E]/10 ${
+                                index % 2 === 0 ? "bg-white" : "bg-[#FFF7F6]"
+                              }`}
+                            >
+                              {label}
+                            </div>
+                          </React.Fragment>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Photo Policy */}
               <div className="bg-gradient-to-br from-[#EFBE94]/20 via-[#FFF7F6]/50 to-[#FFF7F6] rounded-xl p-5 sm:p-6 md:p-7 border border-[#85441E]/20">
                 <p className={`text-sm sm:text-base md:text-lg ${cormorant.className} text-[#85441E] leading-relaxed`}>
-                  <span className="font-semibold">Photo Policy:</span> We'd love for everyone to be fully present. Please avoid posting photos during the celebration or ahead of time—our photographers will take care of the memories.
+                  <span className="font-semibold">Photo Policy:</span> We&apos;d love for everyone to be fully present. Please put down the screens and enjoy the magic with us—we want to see your faces, not your devices—so we kindly ask that you keep all phones and cameras tucked away during the church ceremony. Don&apos;t worry, our photographers have it covered. Once we head to the reception, feel free to snap and share away!
                 </p>
               </div>
 

@@ -49,8 +49,8 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
     return `${days} DAYS TO GO`;
   }, [countdown.days]);
 
-  // Wedding date: 06.27.26 (month, day, year)
-  const countdownNumbers = ['06', '27', '26'];
+  // Wedding date: JUNE 27, 2026 (month, day, year)
+  const countdownNumbers = ['JUNE', '27', '2026'];
   const countdownLabels = ['MONTH', 'DAY', 'YEAR'];
 
   useEffect(() => {
@@ -88,10 +88,10 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
     };
   }, [onComplete]);
 
-  const coupleNames = `${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname}`;
+  const coupleNames = `${siteConfig.couple.brideNickname} & ${siteConfig.couple.groomNickname}`;
   const hashtag =
     siteConfig.snapShare?.hashtag ??
-    `#${siteConfig.couple.groomNickname}And${siteConfig.couple.brideNickname}`;
+    `#${siteConfig.couple.brideNickname}And${siteConfig.couple.groomNickname}`;
   const productionCredit = siteConfig.snapShare?.productionCredit ?? '';
 
   // Palette: dark brown, medium brown, tan, light peachy cream, cream

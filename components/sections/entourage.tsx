@@ -302,7 +302,7 @@ export function Entourage() {
         <p
           className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm uppercase tracking-[0.28em] text-[#85441E] mb-2`}
         >
-          Those who stand with {siteConfig.couple.groomNickname} &amp; {siteConfig.couple.brideNickname}
+          Those who stand with {siteConfig.couple.brideNickname} &amp; {siteConfig.couple.groomNickname}
         </p>
 
         <h2
@@ -550,13 +550,13 @@ export function Entourage() {
                             <div className="w-full max-w-md h-px bg-gradient-to-r from-transparent via-[#606C60]/30 to-transparent"></div>
                           </div>
                         )}
-                        <TwoColumnLayout leftTitle="Matron of Honor" rightTitle="Best Man">
+                        <TwoColumnLayout leftTitle="Best Man" rightTitle="Matron of Honor">
                           {(() => {
                             const maxLen = Math.max(bestMan.length, maidOfHonor.length)
                             const rows = []
                             for (let i = 0; i < maxLen; i++) {
-                              const left = maidOfHonor[i]
-                              const right = bestMan[i]
+                              const left = bestMan[i]
+                              const right = maidOfHonor[i]
                               rows.push(
                                 <React.Fragment key={`honor-row-${i}`}>
                                   <div key={`maid-cell-${i}`} className="px-1.5 sm:px-2 md:px-2.5">

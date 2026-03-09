@@ -31,7 +31,7 @@ const galleryItems = [
 
 export function Gallery() {
   const { brideNickname, groomNickname } = siteConfig.couple
-  const coupleDisplayName = `${groomNickname} & ${brideNickname}`
+  const coupleDisplayName = `${brideNickname} & ${groomNickname}`
   const [selectedImage, setSelectedImage] = useState<(typeof galleryItems)[0] | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isLoading, setIsLoading] = useState(true)
@@ -214,54 +214,56 @@ export function Gallery() {
       <div className="relative z-10 w-full">
         <div className="flex justify-center px-4 sm:px-5 md:px-6">
           <div className="max-w-5xl w-full">
-            {isLoading ? (
+            <div className="rounded-xl sm:rounded-2xl border border-[#85441E]/15 bg-white/60 backdrop-blur-md shadow-[0_18px_45px_rgba(133,68,30,0.25)] px-2.5 py-3 sm:px-4 sm:py-4 md:px-5 md:py-5 lg:px-6 lg:py-6">
+              {isLoading ? (
                 <div className="flex items-center justify-center h-48 sm:h-60 md:h-72">
-                <div className="w-10 h-10 border-[3px] border-[#85441E]/20 border-t-[#85441E] rounded-full animate-spin" />
-              </div>
-            ) : (
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3.5 md:gap-4.5">
-                {galleryItems.map((item, index) => (
-                  <motion.button
-                    key={item.image + index}
-                    type="button"
-                    className="group relative w-full overflow-hidden rounded-lg sm:rounded-xl bg-[#85441E]/5 backdrop-blur-lg border border-[#85441E]/20 shadow-lg hover:shadow-xl hover:border-[#85441E]/60 transition-all duration-300"
-                    onClick={() => {
-                      setSelectedImage(item)
-                      setCurrentIndex(index)
-                    }}
-                    aria-label={`Open image ${index + 1}`}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    {/* Subtle glow on hover */}
-                    <div className="absolute -inset-0.5 bg-gradient-to-br from-[#85441E]/45 via-[#85441E]/28 to-[#EFBE94]/20 rounded-lg sm:rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
-                    
-                    <div className="relative aspect-[3/4] md:aspect-square overflow-hidden">
-                      <NextImage
-                        src={item.image}
-                        alt={item.text || `Gallery image ${index + 1}`}
-                        fill
-                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                        quality={90}
-                        loading="lazy"
-                      />
-                      {/* Gradient overlay on hover */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#85441E]/65 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-                    </div>
-                    
-                    {/* Image counter badge */}
-                    <div className="absolute top-2 right-2 bg-[#85441E]/95 backdrop-blur-sm rounded-full px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-[#85441E]/70 z-20">
-                      <span className="text-xs font-medium text-[#EFBE94] tracking-wide">
-                        {index + 1}/{galleryItems.length}
-                      </span>
-                    </div>
-                  </motion.button>
-                ))}
-              </div>
-            )}
+                  <div className="w-10 h-10 border-[3px] border-[#85441E]/20 border-t-[#85441E] rounded-full animate-spin" />
+                </div>
+              ) : (
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3.5 md:gap-4.5">
+                  {galleryItems.map((item, index) => (
+                    <motion.button
+                      key={item.image + index}
+                      type="button"
+                      className="group relative w-full overflow-hidden rounded-lg sm:rounded-xl bg-[#85441E]/5 backdrop-blur-lg border border-[#85441E]/20 shadow-lg hover:shadow-xl hover:border-[#85441E]/60 transition-all duration-300"
+                      onClick={() => {
+                        setSelectedImage(item)
+                        setCurrentIndex(index)
+                      }}
+                      aria-label={`Open image ${index + 1}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.08 }}
+                    >
+                      {/* Subtle glow on hover */}
+                      <div className="absolute -inset-0.5 bg-gradient-to-br from-[#85441E]/45 via-[#85441E]/28 to-[#EFBE94]/20 rounded-lg sm:rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+                      
+                      <div className="relative aspect-[3/4] md:aspect-square overflow-hidden">
+                        <NextImage
+                          src={item.image}
+                          alt={item.text || `Gallery image ${index + 1}`}
+                          fill
+                          sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                          quality={90}
+                          loading="lazy"
+                        />
+                        {/* Gradient overlay on hover */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#85441E]/65 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+                      </div>
+                      
+                      {/* Image counter badge */}
+                      <div className="absolute top-2 right-2 bg-[#85441E]/95 backdrop-blur-sm rounded-full px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-[#85441E]/70 z-20">
+                        <span className="text-xs font-medium text-[#EFBE94] tracking-wide">
+                          {index + 1}/{galleryItems.length}
+                        </span>
+                      </div>
+                    </motion.button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

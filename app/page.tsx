@@ -67,7 +67,7 @@ export default function Home() {
               <CoupleVideo /> 
               <Countdown />
               <LoveStory />
-              <Gallery />
+    
               <Messages />
               <Details />
               {/* <GuestInformation /> */}
@@ -76,10 +76,11 @@ export default function Home() {
 
               {/* <PrincipalSponsors /> */}
               <GuestList />
-              <BookOfGuests />
+              {/* <BookOfGuests /> */}
               <FAQ />
               <Registry />
-              <SnapShare />
+              <Gallery />
+              {/* <SnapShare /> */}
               <Footer />
             </div>
           </div>

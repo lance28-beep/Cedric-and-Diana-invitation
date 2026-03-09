@@ -7,7 +7,7 @@ interface HeroProps {
 }
 
 const BACKGROUND_VIDEO_SRC =
-  "/background_music/Video background of Eiffel Tower in France - GoogaVideo (1080p, h264).mp4"
+  "/background_music/19d812c2-ec35-46c8-9047-ef41bf054de3.mp4"
 
 export function Hero({ onOpen, visible }: HeroProps) {
   const [contentVisible, setContentVisible] = useState(false)
@@ -68,8 +68,8 @@ export function Hero({ onOpen, visible }: HeroProps) {
             <div
               className="h-28 w-28 sm:h-36 sm:w-36 md:h-44 md:w-44 bg-white drop-shadow-lg"
               style={{
-                maskImage: 'url("/monogram/monogram.png")',
-                WebkitMaskImage: 'url("/monogram/monogram.png")',
+                maskImage: 'url("/monogram/monogramnew.png")',
+                WebkitMaskImage: 'url("/monogram/monogramnew.png")',
                 maskSize: "contain",
                 WebkitMaskSize: "contain",
                 maskRepeat: "no-repeat",

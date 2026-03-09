@@ -104,8 +104,8 @@ export function Navbar() {
             <div
               className="absolute inset-0 bg-[#EFBE94] group-hover:scale-110 group-active:scale-105 transition-all duration-500 drop-shadow-[0_4px_16px_rgba(239,190,148,0.3)] group-hover:drop-shadow-[0_6px_22px_rgba(239,190,148,0.4)]"
               style={{
-                maskImage: 'url("/monogram/monogram.png")',
-                WebkitMaskImage: 'url("/monogram/monogram.png")',
+                maskImage: 'url("/monogram/monogramnew.png")',
+                WebkitMaskImage: 'url("/monogram/monogramnew.png")',
                 maskSize: "contain",
                 WebkitMaskSize: "contain",
                 maskRepeat: "no-repeat",

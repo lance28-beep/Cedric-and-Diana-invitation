@@ -59,7 +59,7 @@ export default async function GalleryPage() {
             Our Love Story Gallery.
           </h1>
           <p className={`${cormorant.className} text-xs sm:text-sm md:text-base lg:text-lg text-[#85441E] font-light max-w-xl mx-auto leading-relaxed px-2`}>
-            Every photograph tells a story of {siteConfig.couple.groomNickname} & {siteConfig.couple.brideNickname}&apos;s journey to forever
+            Every photograph tells a story of {siteConfig.couple.brideNickname} & {siteConfig.couple.groomNickname}&apos;s journey to forever
           </p>
 
           <div className="flex items-center justify-center gap-2 mt-3 sm:mt-4">

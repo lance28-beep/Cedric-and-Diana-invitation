@@ -481,9 +481,9 @@ export function Hero() {
                 fontWeight: 400,
               }}
             >
-              <span className="block">{groomName}</span>
-              <span className="block">&</span>
               <span className="block">{brideName}</span>
+              <span className="block">&</span>
+              <span className="block">{groomName}</span>
             </h1>
           </div>
 

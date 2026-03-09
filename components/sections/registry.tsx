@@ -27,7 +27,7 @@ export function Registry() {
         </p>
         
         <p className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base text-white/90 max-w-xl mx-auto leading-relaxed px-2">
-          Kindly scan the QR code below to view our curated gift options. Thank you for celebrating this new chapter with us and for your kindness from the bottom of our hearts.
+        With all that we have we are truly blessed. Your Presence and prayer are that we request, but if you are thinking of giving a gift, to help us on our way a monetary or if you prefer to purchase a gift, feel free to surprise as on your on way. 
         </p>
 
         <div className="mt-6 sm:mt-8 flex justify-center">

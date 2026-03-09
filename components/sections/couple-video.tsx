@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useMemo, useRef, useCallback } from 'react';
+import { useEffect, useMemo, useRef, useCallback, useState } from 'react';
 import { useGesture } from '@use-gesture/react';
 import { Cinzel, Cormorant_Garamond } from "next/font/google"
 
@@ -953,25 +953,46 @@ function DomeGallery({
 }
 
 export function CoupleVideo() {
+  const [isSmallMobile, setIsSmallMobile] = useState(false)
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+
+    const mq = window.matchMedia("(max-width: 380px)")
+    const updateMatch = (event: MediaQueryList | MediaQueryListEvent) => {
+      const matches = "matches" in event ? event.matches : (event as MediaQueryList).matches
+      setIsSmallMobile(matches)
+    }
+
+    updateMatch(mq)
+    mq.addEventListener("change", updateMatch)
+
+    return () => {
+      mq.removeEventListener("change", updateMatch)
+    }
+  }, [])
+
   return (
     <div id="couple-video" className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center py-24 sm:py-32 bg-[#85441E]">
-      <div className="absolute top-16 sm:top-20 z-20 text-center px-4 w-full space-y-3">
+      <div className="absolute top-10 sm:top-14 md:top-16 z-20 text-center px-4 w-full space-y-4 sm:space-y-5">
         <h2
           className={`${cinzel.className} text-3xl sm:text-4xl md:text-5xl text-[#EFBE94] drop-shadow-lg uppercase tracking-wider`}
           style={{ textShadow: "0 2px 10px rgba(133,68,30,0.3)" }}
         >
           Our Gallery
         </h2>
-        <p className={`${cormorant.className} text-[#EFBE94]/90 text-base sm:text-lg md:text-xl font-light tracking-wide max-w-lg mx-auto leading-relaxed`}>
-          Capturing the beautiful moments of our journey together
+        <p className={`${cormorant.className} text-[#EFBE94]/90 text-base sm:text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed`}>
+        Welcome to our little corner of happiness—a collection of stolen moments, spontaneous adventures, and quiet togetherness. These photos capture the magic of ordinary days made extraordinary by love.
+From cozy dates to sunset strolls, each image holds a piece of our story, a memory of laughter shared and dreams whispered. These aren't just pictures; they're fragments of our beautiful journey, frozen in time
+
         </p>
             </div>
       
-      <div className="w-full h-full mt-12 sm:mt-0">
+      <div className="w-full h-full mt-64 sm:mt-72 md:mt-56">
         <DomeGallery
-          fit={0.85}
-          minRadius={220}
-          maxRadius={500}
+          fit={isSmallMobile ? 0.7 : 0.9}
+          minRadius={isSmallMobile ? 190 : 260}
+          maxRadius={isSmallMobile ? 360 : 560}
           maxVerticalRotationDeg={0}
           segments={28}
           dragDampening={2}

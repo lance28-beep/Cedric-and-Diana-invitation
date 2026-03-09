@@ -106,9 +106,9 @@ export function Footer() {
     <footer 
       className="relative z-20 mt-12 sm:mt-16 overflow-hidden"
     >
-      {/* Background */}
+      {/* Background - soft cream & rustic gradient */}
       <div 
-        className="absolute inset-0 -z-10 bg-gradient-to-b from-[#935F3B] via-[#B26A3B] to-[#EFBE94]"
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-[#EFBE94] via-[#F7E4CF] to-[#D8B892]"
       />
       
       {/* Monogram / Couple Illustration - centered at top */}
@@ -121,8 +121,8 @@ export function Footer() {
         >
           <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 opacity-95">
             <Image
-              src="/monogram/monogram.png"
-              alt={`${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} monogram`}
+              src="/monogram/monogramnew.png"
+              alt={`${siteConfig.couple.brideNickname} & ${siteConfig.couple.groomNickname} monogram`}
               fill
               className="object-contain"
               priority={false}
@@ -136,17 +136,17 @@ export function Footer() {
         {/* Names & Date below illustration */}
         <div className="mt-3 sm:mt-4 md:mt-5 text-center">
           <p
-            className={`${cormorant.className} tracking-[0.25em] sm:tracking-[0.3em] text-xs sm:text-sm md:text-base text-white uppercase`}
+            className={`${cormorant.className} tracking-[0.25em] sm:tracking-[0.3em] text-xs sm:text-sm md:text-base text-[#38150B] uppercase`}
           >
-            {siteConfig.couple.groomNickname} & {siteConfig.couple.brideNickname}
+            {siteConfig.couple.brideNickname} & {siteConfig.couple.groomNickname}
           </p>
           <p
-            className={`${cormorant.className} text-sm sm:text-base md:text-lg text-white mt-1 sm:mt-2`}
+            className={`${cormorant.className} text-sm sm:text-base md:text-lg text-[#38150B] mt-1 sm:mt-2`}
           >
             {ceremonyDate}
           </p>
           <p
-            className={`${cormorant.className} text-xs sm:text-sm md:text-base text-white mt-1 sm:mt-2`}
+            className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#38150B] mt-1 sm:mt-2`}
           >
             {siteConfig.ceremony.venue}
           </p>
@@ -159,19 +159,19 @@ export function Footer() {
           <motion.div className="lg:col-span-2" variants={fadeInUp}>
             <div className="mb-5 sm:mb-6 md:mb-8">
               <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-5">
-                <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-[#EFBE94]/95 rounded-full flex items-center justify-center border border-[#935F3B]/50 flex-shrink-0 shadow-md">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-[#85441E]/10 rounded-full flex items-center justify-center border border-[#935F3B]/50 flex-shrink-0 shadow-md">
                   <Heart className="w-5 h-5 sm:w-6 sm:h-6 md:w-6 md:h-6 text-[#935F3B]" fill="#935F3B" />
                 </div>
-                <h3 className={`${cinzel.className} text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-[#EFBE94] drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)]`}>{siteConfig.couple.groomNickname} & {siteConfig.couple.brideNickname}</h3>
+                <h3 className={`${cinzel.className} text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-[#38150B] drop-shadow-[0_1px_2px_rgba(0,0,0,0.25)]`}>{siteConfig.couple.brideNickname} & {siteConfig.couple.groomNickname}</h3>
               </div>
               <div className="space-y-2.5 sm:space-y-3 md:space-y-4">
-                <div className={`flex items-center gap-2 sm:gap-2.5 md:gap-3 ${cormorant.className} text-[#F7E4CF]`}>
-                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 text-[#EFBE94] flex-shrink-0" />
-                  <span className="text-sm sm:text-base md:text-lg font-medium">{ceremonyDate}</span>
+                <div className={`flex items-center gap-2 sm:gap-2.5 md:gap-3 ${cormorant.className} text-[#38150B]`}>
+                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 text-[#935F3B] flex-shrink-0" />
+                  <span className="text-sm sm:text-base md:text-lg font-medium text-[#38150B]">{ceremonyDate}</span>
                 </div>
-                <div className={`flex items-center gap-2 sm:gap-2.5 md:gap-3 ${cormorant.className} text-[#F7E4CF]`}>
-                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 text-[#EFBE94] flex-shrink-0" />
-                  <span className="text-xs sm:text-sm md:text-base leading-relaxed">{toTitleCase(ceremonyVenue)}</span>
+                <div className={`flex items-center gap-2 sm:gap-2.5 md:gap-3 ${cormorant.className} text-[#38150B]`}>
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 text-[#935F3B] flex-shrink-0" />
+                  <span className="text-xs sm:text-sm md:text-base leading-relaxed text-[#38150B]">{toTitleCase(ceremonyVenue)}</span>
                 </div>
               </div>
             </div>
@@ -298,7 +298,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4 md:gap-5">
             <div className="text-center md:text-left">
               <p className={`text-[#85441E] ${cormorant.className} text-xs sm:text-sm leading-relaxed`}>
-                © {year} {siteConfig.couple.groomNickname} & {siteConfig.couple.brideNickname} — crafted with love, prayers, and gratitude.
+                © {year} {siteConfig.couple.brideNickname} & {siteConfig.couple.groomNickname} — crafted with love, prayers, and gratitude.
               </p>
               <p className={`text-[#85441E] ${cormorant.className} text-xs sm:text-sm mt-1 leading-relaxed`}>
                 This celebration site was designed to share our story and joy with you.

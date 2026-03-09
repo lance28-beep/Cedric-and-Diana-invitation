@@ -12,14 +12,14 @@ const desktopHero = "/Details/couple (3)_imresizer (1).jpg"
 const mobileHero = "/Details/couple (3)_imresizer (1).jpg"
 const eventImageUrl = `${canonicalUrl}${desktopHero}`
 
-const coupleNames = `${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname}`
+const coupleNames = `${siteConfig.couple.brideNickname} & ${siteConfig.couple.groomNickname}`
 const eventTitle = `${coupleNames} - Wedding Invitation`
-const eventDescription = `Celebrate the wedding of ${siteConfig.couple.groomNickname} and ${siteConfig.couple.brideNickname} on ${siteConfig.wedding.date} at ${siteConfig.ceremony.venue}. RSVP, explore their story, and find everything you need to join the celebration.`
+const eventDescription = `Celebrate the wedding of ${siteConfig.couple.brideNickname} and ${siteConfig.couple.groomNickname} on ${siteConfig.wedding.date} at ${siteConfig.ceremony.venue}. RSVP, explore their story, and find everything you need to join the celebration.`
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Event",
-  name: `${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} Wedding`,
+  name: `${siteConfig.couple.brideNickname} & ${siteConfig.couple.groomNickname} Wedding`,
   startDate: "2026-03-06T14:00:00+08:00",
   endDate: "2026-03-06T22:00:00+08:00",
   eventStatus: "https://schema.org/EventScheduled",
@@ -50,12 +50,12 @@ const jsonLd = {
   ],
   image: [eventImageUrl],
   description:
-    `You're invited to celebrate the wedding of ${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname}. Discover ceremony and reception details, RSVP, and explore their story.`,
+    `You're invited to celebrate the wedding of ${siteConfig.couple.brideNickname} & ${siteConfig.couple.groomNickname}. Discover ceremony and reception details, RSVP, and explore their story.`,
   organizer: {
     "@type": "Person",
     name: coupleNames,
   },
-  eventHashtag: `#${siteConfig.couple.groomNickname}And${siteConfig.couple.brideNickname}SayIDo`,
+  eventHashtag: `#${siteConfig.couple.brideNickname}And${siteConfig.couple.groomNickname}SayIDo`,
 }
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   },
   description: eventDescription,
   keywords:
-    `${siteConfig.couple.groomNickname} ${siteConfig.couple.brideNickname} wedding, ${siteConfig.ceremony.venue} wedding, ${siteConfig.reception.venue} wedding, wedding invitation, RSVP, wedding gallery, message wall, love story, #${siteConfig.couple.groomNickname}And${siteConfig.couple.brideNickname}SayIDo`,
+    `${siteConfig.couple.brideNickname} ${siteConfig.couple.groomNickname} wedding, ${siteConfig.ceremony.venue} wedding, ${siteConfig.reception.venue} wedding, wedding invitation, RSVP, wedding gallery, message wall, love story, #${siteConfig.couple.brideNickname}And${siteConfig.couple.groomNickname}SayIDo`,
   applicationName: `${coupleNames} Wedding Invitation`,
   authors: [
     { name: siteConfig.couple.groomNickname },
@@ -128,10 +128,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${coupleNames} Wedding Invitation`,
     description:
-      `You're invited to the wedding of ${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} on ${siteConfig.wedding.date}. RSVP, explore their story, and get all the details for the big day! #${siteConfig.couple.groomNickname}And${siteConfig.couple.brideNickname}SayIDo`,
+      `You're invited to the wedding of ${siteConfig.couple.brideNickname} & ${siteConfig.couple.groomNickname} on ${siteConfig.wedding.date}. RSVP, explore their story, and get all the details for the big day! #${siteConfig.couple.brideNickname}And${siteConfig.couple.groomNickname}SayIDo`,
     images: [eventImageUrl],
-    creator: `@${siteConfig.couple.groomNickname}And${siteConfig.couple.brideNickname}`,
-    site: `@${siteConfig.couple.groomNickname}And${siteConfig.couple.brideNickname}`,
+    creator: `@${siteConfig.couple.brideNickname}And${siteConfig.couple.groomNickname}`,
+    site: `@${siteConfig.couple.brideNickname}And${siteConfig.couple.groomNickname}`,
   },
   robots: {
     index: true,

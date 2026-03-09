@@ -29,7 +29,7 @@ export function WeddingDetails() {
           </div>
           <div>
             <h1 className="text-3xl font-serif font-bold">
-              {siteConfig.couple.groomNickname} & {siteConfig.couple.brideNickname}
+              {siteConfig.couple.brideNickname} & {siteConfig.couple.groomNickname}
             </h1>
             <p className="text-white/90 text-lg mt-1">are getting married!</p>
           </div>

@@ -35,12 +35,12 @@ const faqItems: FAQItem[] = [
   {
     question: "What time should I arrive?",
     answer:
-      `Kindly arrive by ${siteConfig.ceremony.guestsTime} so we can begin the ceremony promptly at exactly ${siteConfig.ceremony.time}. The entourage will arrive at ${siteConfig.ceremony.entourageTime}. Your punctuality means so much to us!`,
+      "Kindly arrive by 2:00 PM. The ceremony starts at 2:30 PM. Your punctuality means so much to us — and don't forget to have a light snack beforehand so you can enjoy the celebration comfortably!",
   },
   {
     question: "How do I RSVP?",
     answer:
-      `Please RSVP through the RSVP section on this invitation. Simply search for your name in the guest list, confirm your attendance, and let us know if you'll be bringing companions. We kindly ask for your response on or before ${siteConfig.details.rsvp.deadline} to help us prepare for the big day. For any questions, please contact ${siteConfig.details.rsvp.contact} at ${siteConfig.details.rsvp.phone}.`,
+      `Please RSVP through the RSVP section on this invitation. Simply search for your name in the guest list, confirm your attendance, and let us know if you'll be bringing companions. We kindly ask for your response on or before May 15, 2026 to help us prepare for the big day. For any questions, please contact ${siteConfig.details.rsvp.contact} at ${siteConfig.details.rsvp.phone}.`,
   },
   {
     question: "Can I bring a plus one or additional guests?",
@@ -60,7 +60,7 @@ const faqItems: FAQItem[] = [
   {
     question: "Is there parking available?",
     answer:
-      "Yes, parking is available at both venues. Please follow the parking signs and instructions from our venue coordinators.",
+      "Yes, parking is available at both venues. Private vehicles and local transport are welcome—just coordinate with friends or family and plan your route ahead of time. We also encourage carpooling when possible to make parking smoother for everyone.",
   },
   {
     question: "What should I give as a gift?",
@@ -70,7 +70,12 @@ const faqItems: FAQItem[] = [
   {
     question: "Can I take photos and videos during the ceremony?",
     answer:
-      "We have a professional photographer and videographer capturing our special moments. We kindly ask that you keep your phones on silent and refrain from taking photos during the ceremony. However, we'd love to see your photos and videos from the reception! Please check the Snap & Share section for details on how to upload them.",
+      "We'd love for everyone to be fully present. Please put down the screens and enjoy the magic with us—we want to see your faces, not your devices—so we kindly ask that you keep all phones and cameras tucked away during the church ceremony. Don't worry, our photographers have it covered. Once we head to the reception, feel free to snap and share away! For upload details, see the Snap & Share section.",
+  },
+  {
+    question: "Do you have any quick tips for the day?",
+    answer:
+      "Here are a few simple tips to help everything flow smoothly:\n\n• Plan your route ahead to avoid unexpected delays.\n• Please avoid walking during the ceremony. Approach the coordinator or wait to be guided.\n• Coordinate carpooling with friends or family when possible.\n• Eat before coming so you have enough energy to celebrate with us.\n\nSchedule Snapshot:\n2:00 PM – Arrival of guests\n2:30 PM – Ceremony\n3:30 PM – Apéro & photos\n5:30 PM – Program starts\n7:00 PM – Dinner & games\n9:00 PM – Party begins\n11:00 PM – Send off",
   },
   {
     question: "What if I have dietary restrictions or allergies?",
