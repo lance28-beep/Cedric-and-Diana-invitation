@@ -190,7 +190,7 @@ export function Footer() {
           </motion.div>
 
           {/* Event Details quick tiles */}
-          <motion.div className="space-y-3 sm:space-y-4 md:space-y-5" variants={fadeInUp}>
+          {/* <motion.div className="space-y-3 sm:space-y-4 md:space-y-5" variants={fadeInUp}>
             <motion.div className="bg-[#EFBE94]/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 border border-[#935F3B]/45 hover:bg-[#EFBE94] transition-all duration-300 shadow-[0_18px_55px_rgba(56,21,11,0.35)]" whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
               <div className="flex items-center gap-2 sm:gap-2.5 md:gap-3 mb-2.5 sm:mb-3 md:mb-4">
                 <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center border border-[#935F3B]/40 flex-shrink-0">
@@ -228,7 +228,7 @@ export function Footer() {
                 </div>
               </div>
             </motion.div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Contact + Quick Links */}
           <motion.div className="space-y-5 sm:space-y-6 md:space-y-7" variants={fadeInUp}>
