@@ -64,16 +64,15 @@ export default function Home() {
               {appState === AppState.DETAILS && <Navbar />}
               <MainHero />
               <Welcome />
-              <CoupleVideo /> 
+        
               <Countdown />
               <LoveStory />
-    
+              <CoupleVideo /> 
               <Messages />
               <Details />
               {/* <GuestInformation /> */}
               <Entourage />
               <WeddingTimeline />
-
               {/* <PrincipalSponsors /> */}
               <GuestList />
               {/* <BookOfGuests /> */}
@@ -82,6 +81,7 @@ export default function Home() {
               <Gallery />
               {/* <SnapShare /> */}
               <Footer />
+ 
             </div>
           </div>
         </main>

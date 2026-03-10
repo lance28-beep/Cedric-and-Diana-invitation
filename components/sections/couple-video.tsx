@@ -973,26 +973,24 @@ export function CoupleVideo() {
   }, [])
 
   return (
-    <div id="couple-video" className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center py-24 sm:py-32 bg-[#85441E]">
-      <div className="absolute top-10 sm:top-14 md:top-16 z-20 text-center px-4 w-full space-y-4 sm:space-y-5">
+    <div id="couple-video" className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center py-20 sm:py-28 bg-[#85441E]">
+      <div className="absolute top-6 sm:top-10 md:top-14 z-20 text-center px-4 w-full space-y-3 sm:space-y-4">
         <h2
           className={`${cinzel.className} text-3xl sm:text-4xl md:text-5xl text-[#EFBE94] drop-shadow-lg uppercase tracking-wider`}
           style={{ textShadow: "0 2px 10px rgba(133,68,30,0.3)" }}
         >
           Our Gallery
         </h2>
-        <p className={`${cormorant.className} text-[#EFBE94]/90 text-base sm:text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed`}>
-        Welcome to our little corner of happiness—a collection of stolen moments, spontaneous adventures, and quiet togetherness. These photos capture the magic of ordinary days made extraordinary by love.
-From cozy dates to sunset strolls, each image holds a piece of our story, a memory of laughter shared and dreams whispered. These aren't just pictures; they're fragments of our beautiful journey, frozen in time
-
+        <p className={`${cormorant.className} text-[#EFBE94]/90 text-sm sm:text-base md:text-lg font-light tracking-wide max-w-2xl mx-auto leading-relaxed`}>
+        Welcome to our little corner of happiness. These photos capture the magic of ordinary days made extraordinary by love. Each image holds a piece of our story. These aren't just pictures; they're fragments of our beautiful journey, frozen in time.
         </p>
             </div>
       
-      <div className="w-full h-full mt-64 sm:mt-72 md:mt-56">
+      <div className="relative w-full h-full pt-32 sm:pt-40 md:pt-44">
         <DomeGallery
-          fit={isSmallMobile ? 0.7 : 0.9}
-          minRadius={isSmallMobile ? 190 : 260}
-          maxRadius={isSmallMobile ? 360 : 560}
+          fit={isSmallMobile ? 0.8 : 0.9}
+          minRadius={isSmallMobile ? 170 : 260}
+          maxRadius={isSmallMobile ? 420 : 560}
           maxVerticalRotationDeg={0}
           segments={28}
           dragDampening={2}
@@ -1002,8 +1000,8 @@ From cozy dates to sunset strolls, each image holds a piece of our story, a memo
           openedImageHeight="70vh"
           openedImageBorderRadius="12px"
         />
-        <div className="absolute bottom-8 sm:bottom-12 z-20 text-center px-4 w-full pointer-events-none">
-          <p className={`${cormorant.className} text-[#EFBE94]/80 text-sm sm:text-base font-light italic tracking-wider opacity-70`}>
+        <div className="relative z-20 text-center px-4 w-full pointer-events-none mt-6 sm:mt-8">
+          <p className={`${cormorant.className} text-[#EFBE94]/80 text-xs sm:text-sm font-light italic tracking-wider opacity-70`}>
             Drag to explore • Tap to expand
           </p>
         </div>

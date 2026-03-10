@@ -17,7 +17,7 @@ export const siteConfig = {
     rsvp: {
       deadline: "July 01, 2026",
       contact: "Diana Valenzuela",
-      phone: "647-622-5353",
+      phone: "+41 76 231 46 48",
     },
   },
   ceremony: {

@@ -22,12 +22,12 @@ export function Registry() {
           Gift Guide
         </h2>
         
-        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 font-light max-w-2xl mx-auto leading-relaxed px-2">
+        {/* <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 font-light max-w-2xl mx-auto leading-relaxed px-2">
           Your presence and prayers are the greatest gift we could ask for. If you would like to bless us further, we’ve prepared a small list of items that would help us start our new home together.
-        </p>
+        </p> */}
         
         <p className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base text-white/90 max-w-xl mx-auto leading-relaxed px-2">
-        With all that we have we are truly blessed. Your Presence and prayer are that we request, but if you are thinking of giving a gift, to help us on our way a monetary or if you prefer to purchase a gift, feel free to surprise as on your on way. 
+        Your presence and prayers are the greatest gift we could ask for. If you would like to bless us further, we’ve prepared a small list of items that would help us as we continue our journey together..
         </p>
 
         <div className="mt-6 sm:mt-8 flex justify-center">
