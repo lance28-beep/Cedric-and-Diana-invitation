@@ -45,38 +45,8 @@ type ItemDef = {
   sizeY: number;
 };
 
-const COUPLE_IMAGES: ImageItem[] = [
-  '/Gallery pics/couple (1).jpg',
-  '/Gallery pics/couple (2).jpg',
-  '/Gallery pics/couple (3).jpg',
-  '/Gallery pics/couple (4).JPG',
-  '/Gallery pics/couple (5).JPG',
-  '/Gallery pics/couple (6).JPG',
-  '/Gallery pics/couple (7).JPG',
-  '/Gallery pics/couple (8).JPG',
-  '/Gallery pics/couple (9).jpg',
-  '/Gallery pics/couple (10).jpg',
-  '/Gallery pics/couple (11).jpg',
-  '/Gallery pics/couple (12).jpg',
-  '/Gallery pics/couple (13).jpg',
-  '/Gallery pics/couple (14).jpg',
-  '/Gallery pics/couple (15).JPG',
-  '/Gallery pics/couple (16).JPG',
-  '/Gallery pics/couple (17).JPG',
-  '/Gallery pics/couple (18).JPG',
-  '/Gallery pics/couple (19).JPG',
-  '/Gallery pics/couple (20).JPG',
-  '/Gallery pics/couple (21).JPG',
-  '/Gallery pics/couple (22).JPG',
-  '/Gallery pics/couple (23).JPG',
-  '/Gallery pics/couple (24).JPG',
-  '/Gallery pics/couple (25).JPG',
-  '/Gallery pics/couple (26).jpg',
-  '/Gallery pics/couple (27).JPG',
-  '/Gallery pics/couple (28).JPG',
-
-
-];
+// WebP versions from public/Gallery pics (converted from PNG/JPG)
+const COUPLE_IMAGES: ImageItem[] = Array.from({ length: 50 }, (_, i) => `/Gallery pics/gallerynew (${i + 1}).webp`);
 
 const DEFAULTS = {
   maxVerticalRotationDeg: 5,

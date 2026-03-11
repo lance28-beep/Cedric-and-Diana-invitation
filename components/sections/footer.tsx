@@ -157,7 +157,7 @@ export function Footer() {
         <motion.div className="grid grid-cols-1 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8 mb-6 sm:mb-8 md:mb-10" variants={staggerChildren} initial="initial" animate="animate">
           {/* Couple Info */}
           <motion.div className="lg:col-span-2" variants={fadeInUp}>
-            <div className="mb-5 sm:mb-6 md:mb-8">
+            {/* <div className="mb-5 sm:mb-6 md:mb-8">
               <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-5">
                 <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-[#85441E]/10 rounded-full flex items-center justify-center border border-[#935F3B]/50 flex-shrink-0 shadow-md">
                   <Heart className="w-5 h-5 sm:w-6 sm:h-6 md:w-6 md:h-6 text-[#935F3B]" fill="#935F3B" />
@@ -174,7 +174,7 @@ export function Footer() {
                   <span className="text-xs sm:text-sm md:text-base leading-relaxed text-[#38150B]">{toTitleCase(ceremonyVenue)}</span>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <motion.div className="bg-[#EFBE94]/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-[#935F3B]/45 shadow-[0_22px_70px_rgba(56,21,11,0.35)]" whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
               <blockquote className={`${cormorant.className} text-[#38150B] italic text-sm sm:text-base md:text-lg leading-relaxed min-h-[60px] sm:min-h-[70px] md:min-h-[80px]`}>
@@ -276,7 +276,7 @@ export function Footer() {
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <h5 className={`${cinzel.className} font-semibold text-sm sm:text-base md:text-lg mb-2.5 sm:mb-3 md:mb-4 text-[#85441E]`}>Quick Links</h5>
               <div className="space-y-1.5 sm:space-y-2">
                 {nav.map((item) => (
@@ -289,7 +289,7 @@ export function Footer() {
                   </a>
                 ))}
               </div>
-            </div>
+            </div> */}
           </motion.div>
         </motion.div>
 

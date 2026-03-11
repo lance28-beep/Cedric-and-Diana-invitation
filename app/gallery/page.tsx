@@ -21,16 +21,27 @@ async function getImagesFrom(dir: string) {
   const abs = path.join(process.cwd(), "public", dir)
   try {
     const entries = await fs.readdir(abs, { withFileTypes: true })
-    return entries
+    const paths = entries
       .filter((e) => e.isFile())
       .map((e) => `/${dir}/${e.name}`.replace(/\\/g, "/"))
       .filter((p) => p.match(/\.(jpe?g|png|webp|gif)$/i))
-      .sort((a, b) => {
-        // Prefer number in parentheses e.g. "couple (1).webp", else number before extension
-        const numA = parseInt(a.match(/\((\d+)\)/)?.[1] || a.match(/(\d+)\.(jpe?g|png|webp|gif)$/i)?.[1] || "0", 10)
-        const numB = parseInt(b.match(/\((\d+)\)/)?.[1] || b.match(/(\d+)\.(jpe?g|png|webp|gif)$/i)?.[1] || "0", 10)
-        return numA - numB
-      })
+
+    // Prefer WebP: when same base name has both .webp and .jpg/.png, keep only .webp
+    const byBase = new Map<string, string>()
+    for (const p of paths) {
+      const base = p.replace(/\.(jpe?g|png|webp|gif)$/i, "")
+      const isWebp = p.toLowerCase().endsWith(".webp")
+      const current = byBase.get(base)
+      if (!current) byBase.set(base, p)
+      else if (isWebp && !current.toLowerCase().endsWith(".webp")) byBase.set(base, p)
+    }
+    const deduped = Array.from(byBase.values())
+
+    return deduped.sort((a, b) => {
+      const numA = parseInt(a.match(/\((\d+)\)/)?.[1] || a.match(/(\d+)\.(jpe?g|png|webp|gif)$/i)?.[1] || "0", 10)
+      const numB = parseInt(b.match(/\((\d+)\)/)?.[1] || b.match(/(\d+)\.(jpe?g|png|webp|gif)$/i)?.[1] || "0", 10)
+      return numA - numB
+    })
   } catch {
     return []
   }

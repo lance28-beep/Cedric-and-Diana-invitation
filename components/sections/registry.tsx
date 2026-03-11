@@ -27,19 +27,25 @@ export function Registry() {
         </p> */}
         
         <p className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base text-white/90 max-w-xl mx-auto leading-relaxed px-2">
-        Your presence and prayers are the greatest gift we could ask for. If you would like to bless us further, we’ve prepared a small list of items that would help us as we continue our journey together..
+          To view our Gift Guide, tap the QR code to open the link, or long-press and choose &quot;Open prezola.com&quot;. Thank you for being part of our journey!
         </p>
 
         <div className="mt-6 sm:mt-8 flex justify-center">
-          <div className="inline-flex items-center justify-center rounded-2xl bg-white/95 px-4 py-4 sm:px-6 sm:py-5 shadow-[0_18px_45px_rgba(0,0,0,0.35)] border border-white/60">
+          <a
+            href="https://prezola.com/buy/view/274069?utm_campaign=list_qr_code"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-2xl bg-white/95 px-4 py-4 sm:px-6 sm:py-5 shadow-[0_18px_45px_rgba(0,0,0,0.35)] border border-white/60 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:border-white/80 transition-shadow transition-colors focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-transparent"
+            aria-label="Open our Prezola gift list (opens in new tab)"
+          >
             <Image
               src="/QR/QR Prezola.png"
-              alt="Scan to view our gift registry options"
+              alt="Scan or tap to view our gift registry options"
               width={220}
               height={220}
-              className="w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 object-contain"
+              className="w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 object-contain pointer-events-none select-none"
             />
-          </div>
+          </a>
         </div>
 
         <div className="flex items-center justify-center gap-2 mt-5 sm:mt-6">
