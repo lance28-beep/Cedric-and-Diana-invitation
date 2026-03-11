@@ -75,11 +75,12 @@ export default function Home() {
               <WeddingTimeline />
               {/* <PrincipalSponsors /> */}
               <GuestList />
-              {/* <BookOfGuests /> */}
-              <FAQ />
+
               <Registry />
               <Gallery />
               {/* <SnapShare /> */}
+                            {/* <BookOfGuests /> */}
+                            <FAQ />
               <Footer />
  
             </div>
