@@ -22,13 +22,13 @@ export function Registry() {
           Gift Guide
         </h2>
         
-        {/* <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 font-light max-w-2xl mx-auto leading-relaxed px-2">
+        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 font-light max-w-2xl mx-auto leading-relaxed px-2">
           Your presence and prayers are the greatest gift we could ask for. If you would like to bless us further, we’ve prepared a small list of items that would help us start our new home together.
-        </p> */}
-        
-        <p className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base text-white/90 max-w-xl mx-auto leading-relaxed px-2">
-          To view our Gift Guide, tap the QR code to open the link, or long-press and choose &quot;Open prezola.com&quot;. Thank you for being part of our journey!
         </p>
+        
+        {/* <p className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base text-white/90 max-w-xl mx-auto leading-relaxed px-2">
+          To view our Gift Guide, tap the QR code to open the link, or long-press and choose &quot;Open prezola.com&quot;. Thank you for being part of our journey!
+        </p> */}
 
         <div className="mt-6 sm:mt-8 flex justify-center">
           <a
@@ -47,6 +47,9 @@ export function Registry() {
             />
           </a>
         </div>
+        <p className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base text-white/90 max-w-xl mx-auto leading-relaxed px-2">
+          To view our Gift Guide, tap the QR code to open the link, or long-press and choose &quot;Open prezola.com&quot;. Thank you for being part of our journey!
+        </p>
 
         <div className="flex items-center justify-center gap-2 mt-5 sm:mt-6">
           <div className="w-1.5 h-1.5 bg-white/80 rounded-full" />

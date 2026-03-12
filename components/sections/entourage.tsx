@@ -550,7 +550,7 @@ export function Entourage() {
                             <div className="w-full max-w-md h-px bg-gradient-to-r from-transparent via-[#606C60]/30 to-transparent"></div>
                           </div>
                         )}
-                        <TwoColumnLayout leftTitle="Best Man" rightTitle="Matron of Honor">
+                        <TwoColumnLayout leftTitle="Best Man" rightTitle="Maid of Honorr">
                           {(() => {
                             const maxLen = Math.max(bestMan.length, maidOfHonor.length)
                             const rows = []

@@ -21,10 +21,10 @@ const cinzel = Cinzel({
 // Images from public/Gallery pics — add or reorder to match your files
 const galleryItems = [
   { image: "/lovestory/1.jpg", text: "" },
-  { image: "/lovestory/2.jpg", text: "" },
-  { image: "/lovestory/3.jpg", text: "" },
-  { image: "/lovestory/4.jpg", text: "" },
-  { image: "/lovestory/5.jpg", text: "" },
+  { image: "/lovestory/2.JPG", text: "" },
+  { image: "/lovestory/3.JPG", text: "" },
+  { image: "/lovestory/4.JPG", text: "" },
+  { image: "/lovestory/5.JPG", text: "" },
   { image: "/lovestory/6.jpg", text: "" },
 
 ]
