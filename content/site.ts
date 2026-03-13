@@ -33,7 +33,7 @@ export const siteConfig = {
     location: "ATTiKA8855 Hämmerli 2D, 8855 Wangen",
     venue: "ATTiKA8855",
     date: "June 27, 2026",
-    time: "4:00 PM",
+    time: "6:00 PM",
   },
   dressCode: {
     theme: "Modern Filipiniana",

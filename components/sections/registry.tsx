@@ -23,7 +23,7 @@ export function Registry() {
         </h2>
         
         <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 font-light max-w-2xl mx-auto leading-relaxed px-2">
-          Your presence and prayers are the greatest gift we could ask for. If you would like to bless us further, we’ve prepared a small list of items that would help us start our new home together.
+        Your presence and prayers are the greatest gift we could ask for. If you would like to bless us further, we’ve prepared a small list of items that would help us as we continue our journey together.
         </p>
         
         {/* <p className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base text-white/90 max-w-xl mx-auto leading-relaxed px-2">
@@ -48,7 +48,7 @@ export function Registry() {
           </a>
         </div>
         <p className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base text-white/90 max-w-xl mx-auto leading-relaxed px-2">
-          To view our Gift Guide, tap the QR code to open the link, or long-press and choose &quot;Open prezola.com&quot;. Thank you for being part of our journey!
+          To view our Gift Guide, tap the QR code to open the link, or long-press and choose &quot;Open prezola.com&quot;. Thank you from the bottom of our hearts!
         </p>
 
         <div className="flex items-center justify-center gap-2 mt-5 sm:mt-6">
