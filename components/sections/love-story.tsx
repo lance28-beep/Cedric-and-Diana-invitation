@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { StorySection } from '@/components/StorySection';
+import { DualImageStorySection } from '@/components/DualImageStorySection';
 import { Cinzel } from "next/font/google";
 
 const cinzel = Cinzel({
@@ -14,17 +15,32 @@ export function LoveStory() {
   return (
     <div className="min-h-screen bg-[#EFBE94] overflow-x-hidden">
       
+      {/* INTRO: Two images flanking the opening story text */}
+      <DualImageStorySection
+        theme="light"
+        leftImageSrc="/lovestory/1.1.JPG"
+        rightImageSrc="/lovestory/1.2.JPG"
+        title="Our Story"
+        text={
+          <>
+            <p>
+            For a long time, there was a vision of a life filled with adventure—a longing for a partner who wouldn&apos;t just be a companion, but a leader and a fellow explorer. For a long time, that vision remained a wish held close to the heart, waiting for the right person to bring it to life. It&apos;s funny how the heart often knows what it&apos;s looking for long before it finds it.
+            </p>
+          </>
+        }
+      />
+
       {/* SECTION 1: Top - Dark */}
       <StorySection
         theme="dark"
         layout="image-left"
         isFirst={true}
         imageSrc="/mobile-background/couple (1).webp"
-        title="Our story"
+        title=""
         text={
           <>
             <p>
-            Fifteen years ago, Diana had a vivid picture in her mind, an imagination of a man, someone who would not just walk beside her, but lead her into a life of adventure. She imagined him perfectly, yet for so long, he was just a wish. It&apos;s funny how the heart often knows what it&apos;s looking for long before it finds it.
+            Then, on January 21st, 2023, in the heart of Madrid, the universe finally delivered. It didn't start with a chance encounter on a busy street, but with a single notification from OKC that would change everything.
             </p>
           </>
         }
@@ -38,10 +54,12 @@ export function LoveStory() {
         text={
           <>
             <p>
-            Then, on January 21st, 2023, in Madrid, fate finally decided it was time.
+            The message was direct and sincere:
+            <br />
+            "Magandang Hapon dear! Finally a profile that really does matches with mine. I am truly amazed about your profile and your views on life and could not agree more. I am not here to waste your time but to make the best out of it. I want to show u that with me u gonna have an amazing and really fun life. I love to travel around the world. Have been to over 80 countries. Let’s go and discover the world together?"
             <br />
             <br />
-            It didn't start with a chance meeting on a busy street, but with a single notification from OKCupid. The message was polite, direct, and promised a future that sounded almost too good to be true:
+            In a digital world of fleeting moments, that message wasn’t just a greeting; it was a blueprint for our future.
               <br />
               <br />
 
@@ -56,9 +74,9 @@ export function LoveStory() {
       imageSrc="/mobile-background/couple (3).webp"
       text={
         <>
-          <blockquote className="border-l-4 border-[#EFBE94] pl-4 italic text-sm sm:text-base md:text-lg text-[#EFBE94]">
-            “Magandang Hapon dear! Finally a profile that really does matches with mine. I am truly amazed about your profile and your views on life and could not agree more. I am not here to waste your time but to make the best out of it. I want to show u that with me u gonna have an amazing and really fun life. I love to travel around the world. Have been to over 80 countries. Lets go and discover the world together?”
-          </blockquote>
+          <p>
+          Believing that distance should never stand in the way of true love, Cédric encouraged Diana to pursue her second Master’s degree in Switzerland. He dedicated himself to making her transition smooth, helping her navigate her new surroundings and settle in. This move became the perfect bridge, allowing Diana to embrace Swiss life and for both of them to envision their shared future in person.
+          </p>
         </>     
       }
     />
@@ -72,8 +90,8 @@ export function LoveStory() {
         text={
           <>
             <p>
-            Fast forward to today, after more than three years together, that promise has been kept in the most beautiful way. They have been to 12 countries, hundreds of unforgettable adventures, explored countless cities,  and shared innumerable weekend trips. The "let's go" from that first message truly became their reality.
-            <br />
+            They have now explored 12 countries together, embarked on hundreds of adventures, and shared innumerable weekends of discovery. Whether he was baking cookies for her friends or cooking delicious meals every day, he proved that true love is found in the smallest details.
+
             </p>
           </>
         }
@@ -87,7 +105,7 @@ export function LoveStory() {
           <>
           <p>
             <br />
-            Looking back, it’s amazing how everything happened exactly as it should have. He wasn't perfect, but he was perfect for her. He was the man she had craved to be with years before they even spoke.
+            Though Cédric felt from the very first moment that Diana was the one, time transformed that feeling into absolute certainty. On September 9th, 2025… Diana’s birthday, amidst the stunning landscapes of Madeira, he asked her to be his wife. Luckily, she said yes.
             <br />
 
             </p>
@@ -103,7 +121,9 @@ export function LoveStory() {
           <>
           <p>
           <br />
-            He taught her how to be loved deeply, how to believe in her own awesomeness, and how to embrace the unknown. From baking cookies for her friends to cooking delicious meals every day, Cedric showed that true love is found in the details.
+          On February 3rd, 2026, that original promise to "not waste time" reached its most beautiful milestone. Cédric finally called her by her new name: Diana Müller. 
+          <br />
+          <br />
             <br />
             <br />
           </p>
@@ -118,7 +138,7 @@ export function LoveStory() {
         text={
           <>
             <p>
-            Now, as they continue to explore the world, they carry with them the beautiful truth that what is meant for you will always find its way. Diana promised to follow his lead and cherish him. Every time she wakes up smiling, she knows that she has already won; she knows that the wait was worth it. She didn't just find a partner; she found her home.
+            "The world is wide, but we’ve already found our favorite place: right here, together. In each other, we found more than just a partner; we finally found a sense of home. To many more miles, many more meals, and a lifetime of 'let's go'—our greatest adventure is only just beginning."
             </p>
           </>   
         }
