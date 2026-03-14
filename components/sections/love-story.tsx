@@ -14,13 +14,18 @@ const cinzel = Cinzel({
 export function LoveStory() {
   return (
     <div className="min-h-screen bg-[#EFBE94] overflow-x-hidden">
+
+
+   <h1 className={`${cinzel.className} text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-[#38150B] pb-4 pt-10`}>
+        Our Love Story
+      </h1>
       
       {/* INTRO: Two images flanking the opening story text */}
       <DualImageStorySection
         theme="light"
         leftImageSrc="/lovestory/1.1.JPG"
         rightImageSrc="/lovestory/1.2.JPG"
-        title="Our Story"
+        // title="Our Story"
         text={
           <>
             <p>

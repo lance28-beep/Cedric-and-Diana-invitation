@@ -282,7 +282,7 @@ export function Details() {
                     </p>
                   </div>
                   {/* QR Code for Ceremony - Right side */}
-                  <div className="flex flex-col items-center gap-1.5 sm:gap-2 flex-shrink-0">
+                  {/* <div className="flex flex-col items-center gap-1.5 sm:gap-2 flex-shrink-0">
                     <div className="bg-[#FFF7F6] p-1.5 sm:p-2 md:p-2.5 rounded-lg border border-[#85441E]/20 shadow-sm">
                       <QRCodeSVG
                         value={ceremonyMapsLink}
@@ -296,7 +296,7 @@ export function Details() {
                     <p className={`text-[9px] sm:text-[10px] md:text-xs ${cormorant.className} text-[#85441E]/60 italic text-center max-w-[80px]`}>
                       Scan for directions
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -402,7 +402,7 @@ export function Details() {
                     </p>
                   </div>
                   {/* QR Code for Reception - Right side */}
-                  <div className="flex flex-col items-center gap-1.5 sm:gap-2 flex-shrink-0">
+                  {/* <div className="flex flex-col items-center gap-1.5 sm:gap-2 flex-shrink-0">
                     <div className="bg-[#FFF7F6] p-1.5 sm:p-2 md:p-2.5 rounded-lg border border-[#85441E]/20 shadow-sm">
                       <QRCodeSVG
                         value={receptionMapsLink}
@@ -416,7 +416,7 @@ export function Details() {
                     <p className={`text-[9px] sm:text-[10px] md:text-xs ${cormorant.className} text-[#85441E]/60 italic text-center max-w-[80px]`}>
                       Scan for directions
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
