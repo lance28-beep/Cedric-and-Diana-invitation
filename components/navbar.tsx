@@ -18,7 +18,7 @@ const navLinks = [
   { href: "#gallery", label: "Gallery" },
   { href: "#messages", label: "Messages" },
   { href: "#details", label: "Details" },
-  { href: "#entourage", label: "Entourage" },
+  // { href: "#entourage", label: "Entourage" },
   { href: "#sponsors", label: "Sponsors" },
   { href: "#guest-list", label: "RSVP" },
   { href: "#registry", label: "Registry" },
