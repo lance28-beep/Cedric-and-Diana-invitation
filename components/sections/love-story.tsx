@@ -110,7 +110,7 @@ export function LoveStory() {
           <>
           <p>
             <br />
-            Though Cédric felt from the very first moment that Diana was the one, time transformed that feeling into absolute certainty. On September 9th, 2025… Diana’s birthday, amidst the stunning landscapes of Madeira, he asked her to be his wife. Luckily, she said yes.
+            Though Cédric felt from the very first moment that Diana was the one, time transformed that feeling into absolute certainty. On September 9th, 2025… Diana’s birthday, amidst the stunning landscapes of Madeira, he asked her to be his wife. And with a joyful 'yes,' their next chapter began. Add one space.. and maybe bold the word “yes”🙏🏻.
             <br />
 
             </p>

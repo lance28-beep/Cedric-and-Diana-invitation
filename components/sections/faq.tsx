@@ -25,7 +25,7 @@ const faqItems: FAQItem[] = [
   {
     question: "When is the wedding?",
     answer:
-      `Our wedding will be held on ${siteConfig.ceremony.date} (${siteConfig.ceremony.day}) at ${siteConfig.ceremony.time}. We kindly ask guests to arrive by ${siteConfig.ceremony.guestsTime} to help us begin promptly.`,
+      `Our wedding will be held on June 27 2026 (Saturday) at 2:30 PM.`,
   },
   {
     question: "Where will the ceremony and reception take place?",
@@ -40,22 +40,22 @@ const faqItems: FAQItem[] = [
   {
     question: "How do I RSVP?",
     answer:
-      `Please RSVP through the RSVP section on this invitation. Simply search for your name in the guest list, confirm your attendance, and let us know if you'll be bringing companions. We kindly ask for your response on or before May 15, 2026 to help us prepare for the big day. For any questions, please contact ${siteConfig.details.rsvp.contact} at ${siteConfig.details.rsvp.phone}.`,
+      `Please RSVP through the RSVP section on this invitation. Simply search for your name in the guest list and confirm your attendance. We kindly ask for your response on or before May 15, 2026 to help us prepare for the big day.`,
   },
   {
     question: "Can I bring a plus one or additional guests?",
     answer:
-      "Each invitation includes a specific number of reserved seats. Please check your invitation details in the RSVP section. If you need to request additional seats, you can use the 'Request to Join' feature, and we'll do our best to accommodate based on availability.",
+      "Unfortunately, we are unable to accommodate any additional guests beyond those specifically listed. Our venue has a strict capacity limit, so we’ve had to keep the guest list very precise. We hope you understand and can still join us!",
   },
   {
     question: "Is there a dress code?",
     answer:
-      "Our celebration is semi-formal / formal with a **Glam Barn / Rustic Glam + Gold** motif. We warmly invite you to wear elegant pieces in deep barn-wood browns and romantic caramel tones, accented with soft champagne gold. Think rich, cozy hues inspired by wood and candlelight rather than bright or neon colors. Kindly avoid wearing plain white or bridal ivory. Principal sponsors and guests can refer to the Attire Guidelines section for visual guides and color inspiration.",
+      "We would love for our guests to wear elegant attire. To help create a harmonious celebration, we encourage you to draw inspiration from our wedding palette: deep barn-wood browns, warm caramels, burnished copper, earthy olive, and soft champagne gold.",
   },
   {
     question: "Will there be assigned seating?",
     answer:
-      "Yes, there will be assigned seating at the reception. Your table number will be displayed in the Book of Guests section once your RSVP is confirmed. Our reception team will gladly guide you to your table so you can relax and enjoy the celebration.",
+      "Yes, there will be assigned seating for the reception to ensure everyone has a comfortable spot. Please look for your name and table number on the seating chart displayed at the entrance as you arrive.",
   },
   {
     question: "Is there parking available?",
@@ -75,7 +75,7 @@ const faqItems: FAQItem[] = [
   {
     question: "Do you have any quick tips for the day?",
     answer:
-      "Here are a few simple tips to help everything flow smoothly:\n\n• Plan your route ahead to avoid unexpected delays.\n• Please avoid walking during the ceremony. Approach the coordinator or wait to be guided.\n• Coordinate carpooling with friends or family when possible.\n• Eat before coming so you have enough energy to celebrate with us.\n\nSchedule Snapshot:\n2:00 PM – Arrival of guests\n2:30 PM – Ceremony\n3:30 PM – Apéro & photos\n5:30 PM – Program starts\n7:00 PM – Dinner & games\n9:00 PM – Party begins\n11:00 PM – Send off",
+      "Here are a few simple tips to help everything flow smoothly:\n\n• Plan your route ahead to avoid unexpected delays.\n• Please avoid walking during the ceremony. Approach the coordinator or wait to be guided.\n• Coordinate carpooling with friends or family when possible.\n• Eat before coming so you have enough energy to celebrate with us.",
   },
   {
     question: "What if I have dietary restrictions or allergies?",
@@ -222,79 +222,7 @@ export function FAQ() {
                               <p className={`${cormorant.className} text-[#38150B] font-medium leading-relaxed sm:leading-loose text-xs sm:text-sm md:text-base lg:text-lg tracking-wide`}>
                                 {item.answer}
                               </p>
-                              {/* Color Palette */}
-                              <div className="flex items-end justify-center gap-1.5 sm:gap-2 md:gap-3 mt-4 sm:mt-5">
-                                {/* Glam barn / rustic glam palette */}
-                                {/* Color 1: #935F3B */}
-                                <div className="flex-1 max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[70px]">
-                                  <div 
-                                    className="w-full h-16 sm:h-20 md:h-24 lg:h-28"
-                                    style={{ 
-                                      backgroundColor: '#935F3B',
-                                      clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
-                                      borderRadius: '0 0 4px 4px',
-                                      boxShadow: '0 4px 14px rgba(147, 95, 59, 0.35)',
-                                      border: '2px solid rgba(147, 95, 59, 0.55)'
-                                    }}
-                                  />
-                                </div>
-                                
-                                {/* Color 2: #85441E */}
-                                <div className="flex-1 max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[70px]">
-                                  <div 
-                                    className="w-full h-16 sm:h-20 md:h-24 lg:h-28"
-                                    style={{ 
-                                      backgroundColor: '#85441E',
-                                      clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
-                                      borderRadius: '0 0 4px 4px',
-                                      boxShadow: '0 4px 14px rgba(133, 68, 30, 0.35)',
-                                      border: '2px solid rgba(133, 68, 30, 0.55)'
-                                    }}
-                                  />
-                                </div>
-                                
-                                {/* Color 3: #38150B */}
-                                <div className="flex-1 max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[70px]">
-                                  <div 
-                                    className="w-full h-16 sm:h-20 md:h-24 lg:h-28"
-                                    style={{ 
-                                      backgroundColor: '#38150B',
-                                      clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
-                                      borderRadius: '0 0 4px 4px',
-                                      boxShadow: '0 4px 14px rgba(56, 21, 11, 0.55)',
-                                      border: '2px solid rgba(56, 21, 11, 0.75)'
-                                    }}
-                                  />
-                                </div>
-                                
-                                {/* Color 4: #EFBE94 */}
-                                <div className="flex-1 max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[70px]">
-                                  <div 
-                                    className="w-full h-16 sm:h-20 md:h-24 lg:h-28"
-                                    style={{ 
-                                      backgroundColor: '#EFBE94',
-                                      clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
-                                      borderRadius: '0 0 4px 4px',
-                                      boxShadow: '0 4px 16px rgba(239, 190, 148, 0.7)',
-                                      border: '2px solid rgba(239, 190, 148, 0.95)'
-                                    }}
-                                  />
-                                </div>
-                                
-                                {/* Color 5: #B26A3B */}
-                                <div className="flex-1 max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[70px]">
-                                  <div 
-                                    className="w-full h-16 sm:h-20 md:h-24 lg:h-28"
-                                    style={{ 
-                                      backgroundColor: '#B26A3B',
-                                      clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
-                                      borderRadius: '0 0 4px 4px',
-                                      boxShadow: '0 4px 14px rgba(178, 106, 59, 0.45)',
-                                      border: '2px solid rgba(178, 106, 59, 0.7)'
-                                    }}
-                                  />
-                                </div>
-                              </div>
+                            
                             </div>
                           ) : (
                             <p className={`${cormorant.className} text-[#38150B] font-medium leading-relaxed sm:leading-loose text-xs sm:text-sm md:text-base lg:text-lg whitespace-pre-line tracking-wide`}>

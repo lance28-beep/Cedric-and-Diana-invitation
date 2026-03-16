@@ -30,7 +30,7 @@ export function Details() {
   const [currentReceptionImageIndex, setCurrentReceptionImageIndex] = useState(0)
 
   const ceremonyImages = [
-    "/church/img1.png",
+    "/church/img3.png",
     "/church/img2.png",
     "/church/img3.png",
   ]
