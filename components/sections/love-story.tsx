@@ -61,6 +61,7 @@ export function LoveStory() {
             <p>
             The message was direct and sincere:
             <br />
+              <br />
             "Magandang Hapon dear! Finally a profile that really does matches with mine. I am truly amazed about your profile and your views on life and could not agree more. I am not here to waste your time but to make the best out of it. I want to show u that with me u gonna have an amazing and really fun life. I love to travel around the world. Have been to over 80 countries. Let’s go and discover the world together?"
             <br />
             <br />
